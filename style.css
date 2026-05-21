@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    min-height: 100vh;
+    background:linear-gradient(180deg, rgba(0, 0, 0, 0.4)), url(assets/Hero\ Image.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 90px 0 20px 0;
+}
+.title{
+    font-size: clamp(12px, 2vw, 18px);
+    color: red;
+    text-shadow: 0px 3px 3px #333;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav ul{
+    display: flex;
+    list-style-type:none;
+    gap: 30px;
+    font-size: clamp(22px, 3vw, 30px);
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+.search{
+    font-size: clamp(28px, 3vw, 2.5em);
+    color: whitesmoke;
+}
+hr{
+   margin:0 auto;
+    width: 70%;
+}
+/* content */
+.content{
+    width: 100vw;
+    height: 82vh;
+    border-bottom: 1px solid red;
+    display: flex;
+}
+.text{
+    width: 40%;
+    border-right: 1px solid red;
+    font-size: clamp(30px, 4.5vw, 5rem);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-weight: 600;
+}
+.images{
+    width: 60%;
+}
