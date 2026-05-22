@@ -37,19 +37,18 @@ nav ul li a{
     color: whitesmoke;
 }
 hr{
-   margin:0 auto;
-    width: 70%;
+   margin: 0 auto;
+   width: 60%;
 }
 /* content */
 .content{
     width: 100vw;
     height: 82vh;
-    border-bottom: 1px solid red;
     display: flex;
+    justify-content: center;
 }
 .text{
     width: 40%;
-    border-right: 1px solid red;
     font-size: clamp(30px, 4.5vw, 5rem);
     text-align: center;
     display: flex;
@@ -60,4 +59,87 @@ hr{
 }
 .images{
     width: 60%;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 200px 200px;
+    gap: 1em;
+    grid-template-areas: 
+    "box1 box2 box2 box3"
+    "box1 box4 box5 box5";
+
+    place-content: center;
+}
+.box{
+    background-color: aliceblue; 
+    border-width: 4px;
+    border-style: solid;
+    border-image: linear-gradient(45deg, red, black, white) 1;
+    border-radius: 20px;
+}
+.box1{
+    background: url(assets/japan.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.box2{
+    background: url(assets/landscape\ img.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.box3{
+    background: url(assets/Koroku-in.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.box4{
+    background: url(assets/4.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.box5{
+    background: url(assets/The\ Intersection\ of\ Nature\ and\ Urban\ Life.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@media(max-width: 56em) {
+    .images{
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    gap: 1em;
+    grid-template-areas: 
+    "box1 box1 box2"
+    "box1 box1 box3"
+    "box4 box5 box5";
+  }
+}
+/* @media(max-width: 50vw) {
+    .images{
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(3, 150px);
+    gap: 1em;
+    grid-template-areas: 
+    "box1 box2"
+    "box3 box2"
+    "box4 box5"
+  }
+} */
+@media(max-width: 42em) {
+    .images{
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(4, 150px);
+    gap: 1em;
+    grid-template-areas: 
+    "box1 box2"
+    "box3 box2"
+    "box3 box4"
+    "box5 box5"
+  }
 }
